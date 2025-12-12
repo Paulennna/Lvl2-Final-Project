@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+:root {
+  --primary-color: #F8C8F4;
+  --secondary-color: #f8408c;
+  --accent-color: #fa61b5;
+  --background-light: #e59bd3;
+  --text-color: #333;
+  --white: #fff;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Body */
+body {
+  background-color: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+
+  /* Center everything horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background: var(--accent-color);
+  color: var(--white);
+  padding: 10px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  font-size: 3rem;
+  color: #ce53c4;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* Wrapper for whole study UI */
+#whole-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Arrows + flashcard row */
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Flashcard */
+#flashcard {
+  width: 625px;
+  max-width: 90vw;       /* responsive */
+  height: 375px;
+  max-height: 60vh;
+  color: var(--primary-color);
+  background-color: var(--background-light);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  perspective: 1000px;
+  position: relative;
+}
+
+#flashcard.flipped {
+  color: var(--background-light);
+  background-color: var(--primary-color);
+}
+
+/* Score + Correct / Incorrect buttons */
+#correctOrNot {
+  text-align: center;
+}
+
+#scoreDisplay {
+  font-size: 2rem;
+  color: #ce53c4;
+}
+
+#Btns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Progress bar + text */
+#progress {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+#progressBar {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+}
+
+/* Shuffle + settings buttons */
+.functionBtns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Snackbar */
+#snackbar {
+  visibility: hidden;
+  min-width: 80px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  font-size: 0.9rem;
+}
+
+#snackbar.show {
+  visibility: visible;
+}
+
+/* Edit dialog */
+#editDialog {
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.edit-dialog-content {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.closeTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Simple table styling */
+#flashcardTable {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#flashcardTable th,
+#flashcardTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#flashcardTable th {
+  background-color: var(--primary-color);
+}
+
+#groupBtns {
+  display: flex;
+  gap: 8px;
+}
+
+/* Pomodoro section */
+.PomodoroTimer {
+  padding: 20px;
+  margin-top: 30px;
+  text-align: center;
+  max-width: 900px;
+}
+
+.PomodoroTimer h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.PomodoroTimer iframe {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  #container {
+    flex-direction: column;
+  }
+
+  #flashcard {
+    height: 300px;
+  }
+
+  #scoreDisplay {
+    font-size: 1.6rem;
+  }
+
+  #Btns,
+  .functionBtns {
+    gap: 15px;
+  }
+}

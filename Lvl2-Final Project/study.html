@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study</title>
+    <link rel="stylesheet" href="study.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0"
+    />
+  </head>
+  <body>
+    <header>
+     <h1>✨Create flashcards. Make coffee ☕. Start studying 🎧 </h1>
+    </header>
+    <div id="whole-container">
+      <div id="container">
+        <button id="prevBtn" title="Previous flashcard">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 50px; color: #d657ac"
+          >
+            arrow_back_ios_new
+          </span>
+        </button>
+        <div id="flashcard"></div>
+        <button id="nextBtn" title="Next flashcard">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 50px; color: #d657ac"
+          >
+            arrow_forward_ios
+          </span>
+        </button>
+      </div>
+      <div id="correctOrNot">
+        <h3 id="scoreDisplay">Correct: 0  Incorrect: 0</h3>
+        <div id="Btns">
+          <button id="correctBtn" title="Correct">
+            <span
+              class="material-symbols-outlined"
+              style="font-size: 80px; color: #50c878"
+            >
+              check
+            </span>
+          </button>
+          <button id="incorrectBtn" title="Incorrect">
+            <span
+              class="material-symbols-outlined"
+              style="font-size: 80px; color: #d2042d"
+            >
+              close
+            </span>
+          </button>
+        </div>
+      </div>
+      <div id="progress">
+        <progress id="progressBar" value="0" max="100"></progress>
+        <p id="progressValue"></p>
+      </div>
+      <div class="functionBtns">
+        <button id="shuffleBtn" title="Shuffle flashcards">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 40px; color: #c85073"
+          >
+            shuffle
+          </span>
+        </button>
+        <button id="editFlashcardBtn" title="Edit flashcards">
+          <span
+            class="material-symbols-outlined"
+            style="font-size: 40px; color: #c85073">
+            settings
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <dialog id="editDialog">
+      <div class="edit-dialog-content">
+        <div class="closeTop">
+          <p>
+            Changing flashcards will reset progress and reshuffle the deck‼️
+          </p>
+          <button id="closeEditBtn" title="Close">
+            <span class="material-symbols-outlined" style="font-size: 30px">
+              tab_close
+            </span>
+          </button>
+        </div>
+        <table id="flashcardTable"></table>
+        <button id="addFlashcardBtn" title="Add flashcard">
+          <span class="material-symbols-outlined"> add </span>
+        </button>
+      </div>
+    </dialog>
+
+    <div id="snackbar">Shuffled!</div>
+    <section class="PomodoroTimer">
+      <h2>Study using a Pomodoro Timer⏰</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/K9g_oSwo-88?si=t-mQV-rZyEl6x3d0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <script src="study.js"></script>
+  </body>
+</html>

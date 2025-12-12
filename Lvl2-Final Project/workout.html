@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Dashboard</title>
+    <link rel="stylesheet" href="workout.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Let's workout</h1>
+            <p>Select a day to display workouts</p>
+        </header>
+
+        <div class="muscle-buttons">
+            <button class="muscle-btn" id="push">Push Day</button>
+            <button class="muscle-btn" id="pull">Pull Day</button>
+            <button class="muscle-btn" id="legs">Leg Day</button>
+            <button class="muscle-btn" id="cardio">Cardio</button>
+        </div>
+
+        <div id="loading" class="loading hidden">
+            <p>Loading exercises...</p>
+        </div>
+
+        <div id="exercises" class="exercises-container"></div>
+    </div>
+
+    
+    <script src="workout.js"></script>
+</body>
+</html>
+
+
+
