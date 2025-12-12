@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+:root {
+    --primary-color: #F8C8F4;
+    --secondary-color: #f8408c;
+    --accent-color: #fa61b5;
+    --background-light: #e59bd3;
+    --text-color: #333;
+    --white: #fff;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Body */
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #F8C8F4;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #F8C8F4;
+    opacity: 0.9;
+}
+
+/* Muscle Buttons */
+.muscle-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.muscle-btn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(255, 240, 255, 0.9), rgba(255, 220, 255, 0.9));
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(22, 22, 22, 0.473);
+    font-family: "Jersey 10", sans-serif;
+}
+
+.muscle-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
+    background: linear-gradient(135deg, rgba(255, 240, 255, 1), rgba(255, 220, 255, 1));
+}
+
+.muscle-btn.active {
+    background: var(--secondary-color);
+    color: var(--white);
+    box-shadow: 0 15px 40px rgba(248, 64, 140, 0.6);
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    color: var(--secondary-color);
+    padding: 40px;
+    font-size: 1.5rem;
+}
+
+.loading.hidden {
+    display: none;
+}
+
+/* Exercises Container */
+.exercises-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Exercise Cards */
+.exercise-card {
+    background: linear-gradient(135deg, rgba(255, 240, 255, 0.9), rgba(255, 220, 255, 0.9));
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(22, 22, 22, 0.473);
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.exercise-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
+    background: linear-gradient(135deg, rgba(255, 240, 255, 1), rgba(255, 220, 255, 1));
+}
+
+.exercise-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.exercise-card .category {
+    display: inline-block;
+    padding: 8px 16px;
+    background: var(--accent-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.exercise-card .description {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.no-exercises {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    padding: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    header p {
+        font-size: 1.2rem;
+    }
+    
+    .exercises-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .muscle-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .muscle-btn {
+        width: 100%;
+    }
+}
