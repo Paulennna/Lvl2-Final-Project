@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Final Project</title> 
+     <link rel="stylesheet" href="dashboard.css" />
+   </head>
+   <body>
+     <!-- Header section -->
+     <header>
+       <h1>Welcome Back!</h1>
+       <h2>What would you like to do today?</h2>
+      </header> 
+
+    <nav class="container">
+      <a href="list.html" class="card">
+      <p class="card-title">too much, need to make a list</p>
+      </a> 
+      <a href="workout.html" class="card">
+            <p class="card-title">Workout</p>
+        </a>
+
+        <a href="study.html" class="card">
+            <p class="card-title">Study</p>
+        </a>
+
+        <a href="break.html" class="card">
+            <p class="card-title">Take a break</p>
+        </a>
+    </nav>
+       <!-- footer -->
+      <footer id="Contact">
+        <p>
+          Have suggestions or comments? Let's connect!</p>
+          <div class="footer-card">
+            <!-- Submition form -->
+          <form class="form" id="contactForm"
+           action="mailto:paulennna@outlook.com" method="post" enctype="text/plain">
+           
+            <!-- First name field -->
+            <div class="field col-3">
+              <label for="firstName">Fitst name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Michael" required> 
+
+            </div>
+
+            <!-- Last name field -->
+            <div class="field col-3">
+              <label for="lastName">Last name</label>
+             <input type="text" id="lastName" name="lastName" placeholder="Skott" required>
+            </div>
+
+            <!-- Comment Field -->
+            <div class="field col-4">
+              <label for="messageBox">Comments or suggestions</label>
+              <input type="text" id="messageBox" name="message" placeholder="🧋🎧✨☕" required>
+            </div>
+            <!-- Action with two buttons -->
+            <div class="actions">
+              <button class="btn btn-primary" type="submit">Submit</button>
+              <button class="btn btn-ghost" type="reset">Clear</button>
+            </div>
+
+            <!-- Message Submitted -->
+            <div class="toast" id="status" hidden>Submitted, thank you!</div>
+         </form>
+      </footer>
+      <footer id="footer"><p>&copy; Paulennna 2025</p></footer>
+  <script src="dashboard.js"></script>
+ </body>
+</html>
